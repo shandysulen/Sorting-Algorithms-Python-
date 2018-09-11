@@ -1,12 +1,12 @@
-def quickSort(lst):
-    if len(lst) <= 1:
-        return lst
-    smaller = [x for x in lst[1:] if x < lst[0]]
-    larger = [x for x in lst[1:] if x >= lst[0]]
-    return quickSort(smaller) + [lst[0]] + quickSort(larger)
+def quickSort(list):
+    if len(list) <= 1:
+        return list
+    smaller = [x for x in list[1:] if x < list[0]]
+    larger = [x for x in list[1:] if x >= list[0]]
+    return quickSort(smaller) + [list[0]] + quickSort(larger)
 
 # Main Function
 if __name__ == '__main__':
-    lst = [2,4,5,1]
-    print quickSort(lst)
+    list = [2,4,5,1]
+    print quickSort(list)
     
